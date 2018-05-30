@@ -35,30 +35,41 @@ Programación orientada a objetos + TDD
     ```
 
 ### Pasos específicos para javascript
+0. Instalar [Node Version Manager](https://github.com/creationix/nvm#installation)
 
-1. Instalamos módulos
+1. Ingresar a la carpeta `javascript` del ejercicio sobre el cual vamos a trabajar.
 
-    ```bash
-        npm install
-    ```
-
-2. Ejecutamos los tests
+2. Instalar la version de JS que figura en el file [.nvmrc], por ejemplo:
 
     ```bash
-        npm run test
+        nvm install 8.9.1
     ```
-    
-    o
-    
+    > Este paso es necesario solo la primera vez que instalamos cada versión.
+
+3. Decirle a nvm que version de node queremos utilizar
+
     ```bash
-        make
+        nvm use
+    ```
+    > Este comando va a setear la version definida en el file [.nvmrc] como la version de node a utilizar
+
+4. Instalamos las dependencias
+
+    ```bash
+        npm i
     ```
 
-#### Qué necesito?
+4. Ejecutamos los tests
 
-2. node 4.2.3
-3. npm  2.14.7
+    ```bash
+        npm test
+    ```
 
+5. Miramos nuestra cobertura
+
+    ```bash
+        npm run coverage
+    ```
 
 ### Pasos específicos para java
 
@@ -76,8 +87,3 @@ Programación orientada a objetos + TDD
 1. Maven 3+ ( brew install maven )
 2. JDK 1.7 u 1.8## Pasos para realizar el workshop
 
-
-## Qué necesito?
-
-1. Notebook para realizar workshop (si queres hacerlo, sino podes venir a compartir tus experiencias)
-2. Ganas de compartir tu solución.
