@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8440506E20B44D52006698E3 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440506D20B44D52006698E3 /* MyClass.swift */; };
 		8440507020B44E7F006698E3 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440506F20B44E7F006698E3 /* Solution.swift */; };
-		84D2474120BDF6C100F70B5D /* dsf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2474020BDF6C100F70B5D /* dsf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +16,6 @@
 		8440506920B44D18006698E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8440506D20B44D52006698E3 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		8440506F20B44E7F006698E3 /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
-		84D2474020BDF6C100F70B5D /* dsf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dsf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				8440506D20B44D52006698E3 /* MyClass.swift */,
-				84D2474020BDF6C100F70B5D /* dsf.swift */,
 				8440506620B44D18006698E3 /* Test */,
 				8440506520B44D18006698E3 /* Products */,
 			);
@@ -126,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8440506E20B44D52006698E3 /* MyClass.swift in Sources */,
-				84D2474120BDF6C100F70B5D /* dsf.swift in Sources */,
 				8440507020B44E7F006698E3 /* Solution.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
