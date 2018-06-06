@@ -12,3 +12,4 @@ all.zip
 merged_keys.po
 *.class
 build/
+xcuserdata/
