@@ -12,3 +12,5 @@ all.zip
 merged_keys.po
 *.class
 dojo_11/java/out
+build/
+.gradle/
