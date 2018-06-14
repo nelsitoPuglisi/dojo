@@ -11,7 +11,7 @@ coverage/
 all.zip
 merged_keys.po
 *.class
-build/
 java/out/
 build/
 .gradle/
+xcuserdata/
