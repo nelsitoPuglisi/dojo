@@ -1,14 +1,8 @@
-### Asignación de aulas
+### Truco Argento
 
-En la Universidad de la Matanza, se dispone de un lugar llamado CAU (Centro Atención Unificado), el cual se encarga de asignar aulas y laboratorios bajo solicitud de los docentes. Dada una solicitud, debe devolverse un aula y una etiqueta, que indique que aula fue asignada y permita pegarse en la puerta de la misma (Ej: "Aula: Lab B").
+El objetivo es implementar el truco.
 
-- Dado un conjunto de Aulas disponibles, se solicita una de ellas con capacidad para al menos 10 personas. 
-Ej:  [{nombre:”Lab A”, capacidad:5},{nombre:”Lab B”, capacidad:15}]   -> "Aula: Lab B"
-
--  Dado el mismo listado, se solicita un aula para 30 personas. Se espera como respuesta: “No hay aula disponible”
-Ej:  [{nombre:”Lab A”, capacidad:5},{nombre:”Lab B”, capacidad:15}]   -> “No hay aula disponible” 
-
-[Lista completa de requerimientos](https://docs.google.com/document/d/1PjtEB4CMJLMYpQl03Yq51OaEFJPuCohUiYlokl4kA8M/edit?usp=sharing)
+[Truco](https://es.wikipedia.org/wiki/Truco_argentino)
 
 ### Metodología
 
