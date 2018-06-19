@@ -10,7 +10,7 @@ describe("solution", () => {
 
     describe("sheet", () => {
         describe("cells", () => {
-            it("should populate two cells with numeric values and response the stored values", () => {
+            it.skip("should populate two cells with numeric values and response the stored values", () => {
                 sheet.setValue("a1", 1);
                 sheet.setValue("a2", 2);
 
@@ -20,7 +20,7 @@ describe("solution", () => {
                     .to.be.eql(2);
             });
 
-            it("should polulate cells with a label and a value and response the stored values", () => {
+            it.skip("should polulate cells with a label and a value and response the stored values", () => {
 
                 sheet.setLabel("a1", "Valor:");
                 sheet.setValue("a2", 2);
@@ -31,7 +31,7 @@ describe("solution", () => {
                     .to.be.eql(2);
             });
 
-            it("should store values and update values references", () => {
+            it.skip("should store values and update values references", () => {
 
                 sheet.setValue("a1", 1);
                 sheet.setIdentity("a2", "=id(a1)")
@@ -50,14 +50,14 @@ describe("solution", () => {
 
             });
 
-            it("should throw error because cell doesn't exist", () => {
+            it.skip("should throw error because cell doesn't exist", () => {
 
                 chai.assert.throws( () => {
                     sheet.get("a1");
                 });
             });
 
-            it("should response summatory", () => {
+            it.skip("should response summatory", () => {
 
                 sheet.setValue("a1", 1);
                 sheet.setValue("a2", 2);
