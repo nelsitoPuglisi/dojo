@@ -1,6 +1,7 @@
 tags
 *.sw*
 *.log
+*.out
 .DS_Store
 *.err
 .idea/
@@ -10,3 +11,7 @@ coverage/
 *.orig
 all.zip
 merged_keys.po
+build
+target
+*.tgz
+out

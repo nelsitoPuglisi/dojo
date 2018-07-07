@@ -1,0 +1,15 @@
+package Room
+
+type NoRoom struct {
+	label    *Label
+	capacity *Capacity
+}
+
+func NewNoRoom() *NoRoom {
+	c := new(NoRoom)
+	return c
+}
+
+func (this NoRoom) fitsAll(filters *CapacityAtLeast) bool {
+	return false
+}
