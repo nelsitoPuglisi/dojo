@@ -5,14 +5,26 @@ import (
 	"testing"
 )
 
-func Test_son_iguales(t *testing.T) {
+func Test_Siete_Oro_pierde_con_siete_espada(t *testing.T) {
 	assert.Equal(t,
-		NewSieteOro(), NewSieteOro(), "iguales")
+		NewSieteEspada(), NewSieteOro().Desafia(NewSieteEspada()), "pierde siete e")
 
 }
 
-func Test_pierde_contra_el_siete_espada(t *testing.T) {
+func Test_Siete_Oro_pierde_con_ancho_basto(t *testing.T) {
 	assert.Equal(t,
-		NewSieteEspada(), NewSieteOro().Desafia(NewSieteEspada()), "gana siete e")
+		NewAnchoBasto(), NewSieteOro().Desafia(NewAnchoBasto()), "pierde ancho b")
+
+}
+
+func Test_Siete_Oro_pierde_con_ancho_espada(t *testing.T) {
+	assert.Equal(t,
+		NewAnchoEspada(), NewSieteOro().Desafia(NewAnchoEspada()), "pierde ancho e")
+
+}
+
+func Test_Siete_Oro_le_gana_al_resto(t *testing.T) {
+	assert.Equal(t,
+		NewSieteOro(), NewSieteOro().Desafia(NewTresEspada()), "gana tres e")
 
 }

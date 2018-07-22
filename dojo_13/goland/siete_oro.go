@@ -8,16 +8,14 @@ func NewSieteOro() *SieteOro {
 
 func (this SieteOro) Desafia(carta Carta) Carta {
 	switch tipada := carta.(type) {
+	case *AnchoEspada:
+		return tipada
 	case *AnchoBasto:
 		return tipada
 	case *SieteEspada:
 		return tipada
 	}
 	return &this
-}
-
-func (this SieteOro) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
 }
 
 func (this SieteOro) palo() string {

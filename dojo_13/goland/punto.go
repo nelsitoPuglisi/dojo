@@ -1,13 +1,15 @@
 package Truco
 
 type Punto struct {
-	jugador *Jugador
-	puntaje int
+	jugador Jugador
+	puntaje Tanto
 }
 
-func NewPunto(jugador *Jugador, puntaje int) *Punto {
+func NewPunto(j Jugador, puntaje Tanto) *Punto {
 	result := new(Punto)
-	result.jugador = jugador
+
+	result.jugador = j
 	result.puntaje = puntaje
+
 	return result
 }

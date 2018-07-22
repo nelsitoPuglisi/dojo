@@ -7,8 +7,8 @@ import (
 
 func Test_punto_son_iguales(t *testing.T) {
 	assert.Equal(t,
-		NewPunto(nil, 2), NewPunto(nil, 2), "iguales")
+		NewPunto(nil, NewTruco()), NewPunto(nil, NewTruco()), "iguales")
 	assert.NotEqual(t,
-		NewPunto(nil, 1), NewPunto(nil, 2), "distintos")
+		NewPunto(nil, NewNoCantaron()), NewPunto(nil, NewTruco()), "distintos")
 
 }

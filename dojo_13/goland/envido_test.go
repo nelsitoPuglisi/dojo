@@ -30,3 +30,8 @@ func Test_envido_valor_debe_ser_igual_para_cualquier_orden_de_cartas(t *testing.
 	assert.Equal(t, valor2, valor3)
 	assert.Equal(t, valor3, valor4)
 }
+
+func Test_envido_tres_espada(t *testing.T) {
+	envido := NewEnvido(NewTresEspada(), NewSieteEspada(), NewAnchoBasto())
+	assert.Equal(t, 30, envido.Valor(), "envido 30")
+}

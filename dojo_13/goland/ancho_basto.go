@@ -7,11 +7,11 @@ func NewAnchoBasto() *AnchoBasto {
 }
 
 func (this AnchoBasto) Desafia(carta Carta) Carta {
+	switch tipada := carta.(type) {
+	case *AnchoEspada:
+		return tipada
+	}
 	return &this
-}
-
-func (this AnchoBasto) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
 }
 
 func (this AnchoBasto) palo() string {

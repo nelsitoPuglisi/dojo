@@ -9,11 +9,7 @@ func NewCuatroCopa() *CuatroCopa {
 }
 
 func (this CuatroCopa) Desafia(carta Carta) Carta {
-	return &this
-}
-
-func (this CuatroCopa) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
+	return carta
 }
 
 func (this CuatroCopa) palo() string {

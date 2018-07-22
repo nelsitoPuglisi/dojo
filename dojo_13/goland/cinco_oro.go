@@ -7,12 +7,8 @@ func NewCincoOro() *CincoOro {
 }
 
 func (this CincoOro) Desafia(carta Carta) Carta {
-	return &this
+	return carta
 
-}
-
-func (this CincoOro) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
 }
 
 func (this CincoOro) palo() string {

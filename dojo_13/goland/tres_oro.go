@@ -12,10 +12,6 @@ func (this TresOro) Desafia(carta Carta) Carta {
 	return &this
 }
 
-func (this TresOro) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
-}
-
 func (this TresOro) palo() string {
 	return "oro"
 }

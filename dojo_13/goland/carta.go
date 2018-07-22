@@ -2,7 +2,6 @@ package Truco
 
 type Carta interface {
 	Desafia(carta Carta) Carta
-	ValorEnvido(cartas []Carta) int
 
 	numeroEnvido() int
 

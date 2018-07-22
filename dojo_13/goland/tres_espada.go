@@ -12,14 +12,10 @@ func (this TresEspada) Desafia(carta Carta) Carta {
 	return &this
 }
 
-func (this TresEspada) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
-}
-
 func (this TresEspada) palo() string {
-	return "copa"
+	return "espada"
 }
 
 func (this TresEspada) numeroEnvido() int {
-	return 4
+	return 3
 }

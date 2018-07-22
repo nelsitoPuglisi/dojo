@@ -11,10 +11,6 @@ func (this CincoEspada) Desafia(carta Carta) Carta {
 
 }
 
-func (this CincoEspada) ValorEnvido(cartas []Carta) int {
-	return ValorEnvido(this, cartas)
-}
-
 func (this CincoEspada) palo() string {
 	return "espada"
 }

@@ -1,22 +1,72 @@
 package Truco
 
 type Ronda struct {
-	bajadas []Bajada
+	basas []*Basa
+
+	puntaje Tanto
 }
 
-func NewRonda(bajada Bajada) *Ronda {
+func NewRonda(j Jugador, c Carta) *Ronda {
 	result := new(Ronda)
 
-	result.bajadas = []Bajada{bajada}
+	result.basas = []*Basa{NewBasa(j, c)}
+	result.puntaje = NewNoCantaron()
 
 	return result
 }
 
-func (this *Ronda) y(j *Jugador, carta Carta) Bajada {
-	this.bajadas[0].y(j, carta)
-	return this.enCurso.y(j, carta)
+func (this *Ronda) basaActual() *Basa {
+	return this.basas[len(this.basas)-1]
+}
+
+func (this *Ronda) esNueva(basa *Basa) bool {
+	for _, b := range this.basas {
+		if b == basa {
+			return false
+		}
+	}
+	return true
+}
+
+func (this *Ronda) BajaUna(j Jugador, carta Carta) *Ronda {
+
+	otraBasa := this.basaActual().BajaUna(j, carta)
+
+	if !this.esNueva(otraBasa) {
+		return this
+	}
+
+	this.basaActual().verificarTurno(j)
+
+	this.basas = append(this.basas, NewBasaConPrevia(this.basaActual(), j, carta))
+	return this
+}
+
+func (this *Ronda) Abandona(j Jugador) *Ronda {
+	this.basas = append(this.basas, this.basaActual().abandona(j))
+	return this
+}
+
+func (this *Ronda) Truco() *Ronda {
+	this.puntaje = this.puntaje.Siguiente()
+	return this
+}
+
+func (this *Ronda) Retruco() *Ronda {
+	this.puntaje = this.puntaje.Siguiente()
+	return this
+}
+
+func (this *Ronda) Quiero() *Ronda {
+	return this
+}
+
+func (this *Ronda) NoQuiero(j Jugador) *Ronda {
+	this.Abandona(j)
+	this.puntaje = this.puntaje.NoQuiero()
+	return this
 }
 
 func (this *Ronda) Punto() *Punto {
-	return NewPunto(nil, 1)
+	return this.basaActual().Punto(this.puntaje)
 }
